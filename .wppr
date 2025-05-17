@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Directory containing wallpapers
+WALLPAPER_DIR=~/wpps
+
+# Get a random image from the directory
+RANDOM_IMAGE=$(find "$WALLPAPER_DIR" -type f -name '*.jpg' -o -name '*.png' | shuf -n 1)
+
+# Open the random image with feh
+feh --bg-fill "$RANDOM_IMAGE"
